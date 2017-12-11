@@ -11,6 +11,7 @@
 
 namespace OxidCommunity\Whoops\Core;
 
+use Whoops\Run;
 use OxidEsales\Eshop\Core\Registry;
 use Whoops\Handler\PrettyPageHandler;
 
@@ -30,8 +31,8 @@ class ShopControl extends ShopControl_parent
     protected function _setDefaultExceptionHandler()
     {
         if (($this->isAdmin() && $this->getUser()) || !Registry::getConfig()->isProductiveMode() || $this->_isDebugMode()) {
-            $this->_run = new Whoops\Run();
-            $this->_run->pushHandler(new Whoops\Handler\PrettyPageHandler());
+            $this->_run = new Run();
+            $this->_run->pushHandler(new PrettyPageHandler());
             $this->_run->register();
         }
     }
