@@ -1,12 +1,12 @@
 <?php
 /**
- * @package   ocb_cleartmp
+ * @package   smx_whoops
  * @category  OXID Module
  * @version   2.0.0
- * @license   GNU License http://opensource.org/licenses/GNU
- * @author    Joscha Krug <krug@marmalade.de> / OXID Community
- * @link      https://github.com/OXIDprojects/adminsearch
- * @see       https://github.com/OXIDCookbook/ocb_cleartmp
+ * @license   MIT License http://opensource.org/licenses/MIT
+ * @author    shoptimax GmbH / OXID Community
+ * @link      https://github.com/OXIDprojects/smx_whoops
+ * @see       https://github.com/shoptimax/smx_whoops
  */
 
 /**
@@ -19,15 +19,14 @@ $sMetadataVersion = '2.0';
  */
 $aModule = [
     'id'          => 'smx_whoops',
-    'title'       => 'OXID Community Whoops (by shoptimax)',
+    'title'       => 'OXID Community Whoops Exception Handler (by shoptimax)',
     'description' => 'Whoops exception handling',
     'thumbnail'   => '',
     'version'     => '2.0.0',
     'author'      => 'OXID Community',
-    'url'         => 'https://github.com/OXIDCookbook/smx_whoops',
+    'url'         => 'https://github.com/OXIDprojects/smx_whoops',
     'email'       => '',
     'extend'      => [
-        \OxidEsales\Eshop\Core\ShopControl::class => \OxidCommunity\Whoops\Core\ShopControl::class,
     ],
     'settings'    => [
     ],
